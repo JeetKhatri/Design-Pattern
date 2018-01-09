@@ -14,8 +14,8 @@ public class FactoryBookTicketSelection {
 	 * 
 	 */
 	public FactoryBookTicketAbstractClass getPlan(String type){
-
-		if(type.equalsIgnoreCase("GoldTicket")){
+		if(type == null){
+		}else if(type.equalsIgnoreCase("GoldTicket")){
 			return new FactoryBookTicketGold();
 		}else if(type.equalsIgnoreCase("SilverTicket")){
 			return new FactoryBookTicketSilver();
