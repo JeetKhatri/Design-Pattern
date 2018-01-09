@@ -17,7 +17,11 @@ public class AbstractPatternMain {
 		System.out.println("Select bank :-\n1. SBI\n2. ICICI\n3. HDFC\nEnter your choice : ");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int ch = Integer.parseInt(br.readLine());
+		
+		// create object of bank factory
 		AbstractPatternAbstractFactory factoryBank = AbstractPatternFactoryCreator.getFactory("bank");
+		
+		// create object of bank 
 		AbstractPatternBank b = null;
 		switch (ch) {
 		case 1:
@@ -36,8 +40,13 @@ public class AbstractPatternMain {
 		}
 		System.out.println("\nSelect Loan type :-\n1. Education\n2. Home\n3. Business\nEnter your choice : ");
 		ch = Integer.parseInt(br.readLine());
+		
+		// create object of loan factory
 		AbstractPatternAbstractFactory factoryLoan = AbstractPatternFactoryCreator.getFactory("loan");
+		
+		// create object of loan
 		AbstractPatternLoan l = null;
+		
 		switch (ch) {
 		case 1:
 			l = factoryLoan.getLoan("education");
@@ -57,6 +66,8 @@ public class AbstractPatternMain {
 		Double amount = Double.parseDouble(br.readLine());
 		System.out.println("Enter Loan Year : ");
 		Double year = Double.parseDouble(br.readLine());
+		
+		// call for calculate interest
 		double inter = Math.round(l.calculateLoanInterest(amount, year));
 		System.out.println("\nBank name : "+b.getBankName()+"\nLoan type : "+l.getLoanType());
 		System.out.println("Amount : "+amount+" Rs.\nNo of Year : "+year+"\nInterest rate : "+l.getInterestRate()+"%");
