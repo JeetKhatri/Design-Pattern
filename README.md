@@ -3,7 +3,7 @@
 
 Include :-
 1) Pattern overview
-2) Code
+2) Pattern Implementation
 3) Doc contains pattern details and diagram
 
 
