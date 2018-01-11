@@ -1,0 +1,85 @@
+Design Pattern
+
+==>	Creational Pattern (concern while creating the object)
+	1)	Factory Method Pattern
+		-	define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate.
+		-	Also known as virtual constructor.
+	2)	Abstract Factory Pattern
+		-	define an interface or abstract class for creating families of related (or dependent) objects but without specifying their concrete sub-classes.
+		-	Also known as Kit.
+	3)	Singleton Pattern
+		-	define a class that has only one instance
+	4)	Prototype Pattern
+		-	cloning of an existing object instead of creating new one and can also be customized as per the requirement.
+	5)	Builder Pattern
+		-	construct a complex object from simple objects using step-by-step approach
+	6)	Object Pool Pattern
+		-	When objects are expensive to create and they are needed only for short periods of time
+		-	Objects in the pool have a life cycle: creation, validation and destroy.
+
+			
+==>	Structural Pattern (concern with how class or object are connected to make a larger form)
+	1)	Adapter Pattern
+		-	converts the interface of a class into another interface that a client wants.
+		-	also known as Wrapper.
+	2)	Bridge Pattern
+		-	we can differentiate between the abstraction and implementation so client only see abstraction part without being concern about implementation part.
+		-	also known as Handle or Body.
+	3)	Composite Pattern
+		-	Allow you to make a tree structure. So assign each node in tree structure to perform a specific task.
+		-	Two type of node 1) Leaf 2) Composite.
+	4)	Decorator Pattern
+		-	Allow you to add new functionality without changing the existing functionality.
+	5)	Facade Pattern
+		-	Define higher level of interface which is easier to use.
+		-	Ex : travel expenses = flight+hotel+food+other
+	6)	Flyweight Pattern
+		-	to reuse already existing similar kind of objects by storing them and create new object when no matching object is found
+		-	2 type of state. 1) Intrinsic State : constant  2) Extrinsic State : Change
+	7)	proxy Pattern
+		-	proxy means an object representing another object.
+		-	provides the control for accessing the original object
+		-	also known as Surrogate or Placeholder.
+		-	Ex: man go to ATM and withdraw money then ATM is proxy because bank is a real object. 
+			
+
+==>	Behavioral Pattern (concern with how class or object are communicate with each other)
+	1)	Chain of Responsibility
+		-	avoid coupling the sender of a request to its receiver by giving multiple objects a chance to handle the request.
+		-	If 1st receive can't receive it then sen it to the next receiver
+		-	Two type:-
+			1)	one receiver : student ask question to teacher
+			2)	More then 1 receiver : ATM machine
+	2)	Command Pattern
+		-	also known as Action or Transaction.
+	3)	Interpreter Pattern
+		-	Interpreter pattern provides a way to evaluate language grammar or expression.
+		-	This pattern is used in SQL parsing, symbol processing engine etc.
+		-	It is easier to change and extend the grammar.
+	4)	Iterator Pattern
+		-	to access the elements of an collection object sequentially without exposing its underlying implementation
+		-	Collection can be a set,list,array
+		-	also known as Cursor.
+	5)	Mediator Pattern
+		-	All communication are happen through the mediator object
+		-	Ex : Facebook group, WhatsApp chat 
+	6)	Memento Pattern
+		-	Memento pattern is used to restore state of an object to a previous state.
+	7)	Null Object Pattern
+		-	Instead of putting if check for a null value, Null Object reflects a do nothing relationship. 
+		-	Such Null object can also be used to provide default behaviour in case data is not available.
+	8)	Observer Pattern
+		-	This pattern defines the dependency so that one object change then that notified to all their dependent.
+		-	Also known as listener.
+		-	JSK provide observer and it is a part of util package.
+	9)	State Pattern
+		-	class behavior changed based on its state.
+		-	Like CDplayer is started then state changed to start stage and CDplayer is stopped then state changed to stop stage
+	10)	Strategy Pattern
+		-	a class behavior or its algorithm can be changed at run time.
+		-	Like add, multi, sub are class name and runtime decide which class method are called
+	11)	Template method
+		-	Template method design pattern is to define an algorithm as skeleton of operations and leave the details to be implemented by the child classes. 
+		-	The overall structure and sequence of the algorithm is preserved by the parent class.
+	12)	Visitor pattern
+		-	If we want to perform a task on each and every object at that time we use this pattern.
